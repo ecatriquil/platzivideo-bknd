@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "DB_USER": "@platzivideo_dbUser",
+    "DB_PASSWORD": "@platzivideo_dbPass",
+    "DB_HOST": "@platzivideo_dbHost",
+    "DB_NAME": "@platzivideo_dbName",
+    "DEFAULT_ADMIN_PASSWORD": "@platzivideo_defaultAdminPass",
+    "DEFAULT_USER_PASSWORD": "@platzivideo_defaultUserPass",
+    "AUTH_JWT_SECRET": "@platzivideo_defaultAuthJWTSecret",
+    "PUBLIC_API_KEY_TOKEN": "@platzivideo_defaultPublicApiKeyToken",
+    "ADMIN_API_KEY_TOKEN": "@platzivideo_defaultAdminApiKeyToken"
+  }
+}
